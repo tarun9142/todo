@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Todo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+
+<body>
+    <h1>Todo List App</h1>
+    <div id="container">
+
+        <!-- input for adding a new task -->
+
+        <input placeholder="+Add new task here" class="add-task" id="add" data-helloWord="asdasdas" />
+        <span id="total-tasks">Total tasks: <span id="tasks-counter"><b>0</b></span></span><br>
+        <div class="for-all">
+            <input type="checkbox" name="complete-all" id="complete-all" class="complete-all custom-checkbox">
+            <label for="complete-all"><b>Complete All</b></label>
+            <div class="delete-completed">
+                <span class="delete-completed-label">Delete Completed</span>
+                <img src="./assets/images/bin.png" alt="delete-completed" class="delete-completed-img">
+            </div>
+        </div>
+
+        <!-- list for holding the tasks  -->
+        <ul id="list">
+            <!-- <li>
+          <input type="checkbox" id="task1" data-id="12" class="custom-checkbox">
+          <label for="task1">Buy groceries</label>
+          <img src="bin.svg" class="delete" data-id="12" />
+        </li> -->
+        </ul>
+    </div>
+    <script src="./todo.js"></script>
+</body>
+
+</html>

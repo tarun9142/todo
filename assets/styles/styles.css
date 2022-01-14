@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right bottom, #ededfa,#a0a0fd);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.for-all{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 2px solid black ;
+    border-bottom: 2px solid black;
+}
+
+.delete-completed{
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.delete-completed span{
+    padding-right: 12px;
+    font-weight: bold;
+}
+
+.delete-completed-img{
+    height: 28px;
+    border-radius: 3px;
+}
+
+  /* main container  */
+
+#container {
+  width: 500px;
+  height: 85%;
+  margin: 0 auto;
+  border: 1px solid black;
+  background-color: #eaeafd;
+}
+
+
+/* tasks list  */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 74%;
+  overflow-y: scroll;
+
+  /* border: 1px solid #e5e5e5; */
+}
+ul li {
+  padding: 10px;
+  /* padding-left: 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+}
+ul li:hover {
+  background: #f3f3f3;
+}
+#list input, #complete-all{
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#list label , #complete-all + label{
+  position: relative;
+  cursor: pointer;
+}
+
+#list label:before , #complete-all + label:before{
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #0079bf;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#list input:checked + label:after, #complete-all:checked + label:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+#list input:checked + label:before , #complete-all:checked + label:before{
+  background: #0079bf;
+} 
+#list input:checked + label{
+  text-decoration: line-through;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+#list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+
+#list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+
+
+/* delete icon styles */
+
+.delete {
+    height: 28px;
+    border-radius: 3px;
+}
+.delete:hover {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+
+/* headings */
+
+h1 {
+  text-align: center;
+}
+
+/* add task input box */
+
+.add-task {
+  width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding: 11px;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 3px;
+}
+
+/* task counter */
+
+#total-tasks {
+  margin-bottom: 20px;
+  font-size: 13px;
+    margin-left: 2px;
+    color: gray;
+}
